@@ -2,7 +2,7 @@ import React from "react";
 
 const NoResults = () => {
   return (
-    <div className="flex flex-col items-center gap-2">
+    <div className="flex flex-col items-center justify-center gap-2 h-[50vh]">
       <img
         src="/src/assets/images/no_results.png"
         alt="no results image"
