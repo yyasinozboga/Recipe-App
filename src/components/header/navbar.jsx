@@ -37,14 +37,10 @@ const Navbar = () => {
           <NavLink to="/type/cuisineTypes" className="nav-link">
             Cuisines
           </NavLink>
-
-          <NavLink to="/contact" className="nav-link">
-            Contact
-          </NavLink>
         </div>
 
         <form
-          className="flex items-center gap-3 w-full lg:w-[40%] xl:w-[30%]"
+          className="flex items-center gap-3 w-full lg:w-[40%] xl:w-[40%]"
           onSubmit={handleSubmit}
         >
           <input
