@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+@layer base {
+  .slider {
+    @apply size-full relative after:absolute after:bg-black/40 after:content-[''] after:left-0 after:top-0 after:size-full;
+  }
+
+  .social-media {
+    @apply w-10 h-10 border-[1px] border-white flex justify-center items-center rounded-full;
+  }
+}
+
+.nav-link {
+  @apply text-white font-medium md:text-lg xl:text-[16px] text-nowrap;
+}
+
+.active {
+  border-bottom: 2px solid white;
+}
+
+.slick-arrow {
+  z-index: 9999;
+  width: 100px;
+}
+
+.slick-arrow::before {
+  font-size: 30px;
+}
+
+.slick-prev {
+  left: 0;
+}
+
+.slick-next {
+  right: 0;
+}
+
+.recipe-slider .slick-arrow::before {
+  @apply text-jet;
+}
+
+.hero {
+  background-image: url("/src/assets/images/pattern_one.jpg");
+  background-size: cover;
+  padding-bottom: 50px;
+}
+
+.bg-meals {
+  position: relative;
+  background-image: url("/src/assets/images/food_bg_two.jpg");
+  background-size: cover;
+  height: 100%;
+  padding-bottom: 30px;
+  padding-top: 5px;
+}
+
+.box {
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.5;
+}
+
+.bg-meals h1:last-child {
+  color: white;
+}
+
+.category-box {
+  @apply relative size-40 xl:size-56 overflow-hidden rounded-full border-4 border-white hover:scale-90 duration-500;
+
+  img {
+    transition: all 0.5s ease;
+  }
+}
+
+.category-box:hover {
+  .category-img {
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0.5;
+  }
+
+  img {
+    transform: rotate(360deg);
+  }
+
+  h3 {
+    display: block;
+  }
+}
